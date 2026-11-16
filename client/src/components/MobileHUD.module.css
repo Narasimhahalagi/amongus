@@ -1,0 +1,157 @@
+.hudContainer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+}
+
+/* Floating Joystick (Bottom-Left) */
+.joystickZone {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  width: 130px;
+  height: 130px;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.joystickBase {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 254, 220, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%);
+  border: 3px solid rgba(56, 254, 220, 0.35);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.joystickKnob {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #38fedc 0%, #0d9488 100%);
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 0 10px rgba(56, 254, 220, 0.5);
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.05s ease-out;
+}
+
+/* Action Buttons (Bottom-Right) */
+.actionsCluster {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  pointer-events: auto;
+}
+
+.actionBtn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Consolas', monospace;
+  font-weight: 900;
+  cursor: pointer;
+  border: 3px solid #475569;
+  background: rgba(30, 41, 59, 0.85);
+  color: #64748b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  user-select: none;
+  touch-action: manipulation;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.actionBtn:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.btnUseActive {
+  background: radial-gradient(circle at 35% 35%, #38fedc 0%, #0f766e 100%) !important;
+  border-color: #5eead4 !important;
+  color: #042f2e !important;
+  box-shadow: 0 0 20px rgba(56, 254, 220, 0.7) !important;
+  animation: pulseGlow 1.2s infinite alternate;
+}
+
+.btnReportActive {
+  background: radial-gradient(circle at 35% 35%, #ef4444 0%, #991b1b 100%) !important;
+  border-color: #fca5a5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.8) !important;
+  animation: pulseGlow 0.9s infinite alternate;
+}
+
+.btnKillActive {
+  background: radial-gradient(circle at 35% 35%, #dc2626 0%, #7f1d1d 100%) !important;
+  border-color: #f87171 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.8) !important;
+  animation: pulseGlow 1s infinite alternate;
+}
+
+.cooldownBadge {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #f87171;
+  font-weight: 800;
+}
+
+.btnLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.topRightCluster {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.hudPillBtn {
+  background: rgba(18, 22, 28, 0.88);
+  border: 2px solid #3e4756;
+  border-radius: 10px;
+  color: #38fedc;
+  padding: 8px 14px;
+  font-family: 'Consolas', monospace;
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s;
+}
+
+.hudPillBtn:hover {
+  background: #2a3441;
+  border-color: #38fedc;
+}
+
+@keyframes pulseGlow {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}

@@ -1,0 +1,113 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  background: #151922;
+  border: 4px solid #3e4756;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 245, 87, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Consolas', monospace;
+  color: #e2e8f0;
+}
+
+.header {
+  background: #232a36;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #1a1f28;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #f5f557;
+  letter-spacing: 1px;
+}
+
+.closeBtn {
+  background: #dc2626;
+  border: 2px solid #ef4444;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableWrapper {
+  padding: 16px;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.table th {
+  padding: 10px 12px;
+  background: #1c222d;
+  color: #94a3b8;
+  font-weight: 700;
+  border-bottom: 2px solid #334155;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.rankPill {
+  font-weight: 900;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rank1 { background: #eab308; color: #000; }
+.rank2 { background: #94a3b8; color: #000; }
+.rank3 { background: #b45309; color: #fff; }
+
+.scoreBadge {
+  font-weight: 800;
+  color: #38fedc;
+}

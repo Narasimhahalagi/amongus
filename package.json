@@ -1,0 +1,13 @@
+{
+  "name": "tech-among-us",
+  "version": "1.0.0",
+  "description": "Tech Among Us - Real-Time Multiplayer College Tech Club Event Game",
+  "scripts": {
+    "server": "cd server && node src/server.js",
+    "client": "cd client && npm run dev",
+    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['run', 'server'], { stdio: 'inherit', shell: true }); spawn('npm', ['run', 'client'], { stdio: 'inherit', shell: true });\""
+  },
+  "keywords": ["among-us", "multiplayer", "socket.io", "react", "game"],
+  "author": "Tech Among Us Team",
+  "license": "MIT"
+}

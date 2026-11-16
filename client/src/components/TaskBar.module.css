@@ -1,0 +1,67 @@
+.taskBarContainer {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 50;
+  background: rgba(18, 22, 28, 0.88);
+  border: 3px solid #3e4756;
+  border-radius: 12px;
+  padding: 8px 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  user-select: none;
+  font-family: 'Consolas', 'Courier New', monospace;
+  min-width: 260px;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #94a3b8;
+}
+
+.titleText {
+  color: #38fedc;
+}
+
+.countText {
+  color: #10b981;
+  font-weight: 700;
+}
+
+.barTrack {
+  height: 18px;
+  background: #0f172a;
+  border: 2px solid #334155;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(180deg, #34d399 0%, #10b981 60%, #059669 100%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+
+.segmentsOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  pointer-events: none;
+}
+
+.segmentDivider {
+  flex: 1;
+  border-right: 2px solid rgba(15, 23, 42, 0.8);
+}
+
+.segmentDivider:last-child {
+  border-right: none;
+}

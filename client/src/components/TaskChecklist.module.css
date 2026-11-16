@@ -1,0 +1,61 @@
+.checklistContainer {
+  position: absolute;
+  top: 75px;
+  left: 14px;
+  z-index: 45;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  border: 2px solid #334155;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-family: 'Consolas', monospace;
+  font-size: 0.78rem;
+  max-width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+  user-select: none;
+}
+
+.header {
+  color: #94a3b8;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #f5f557;
+  line-height: 1.2;
+}
+
+.taskCompleted {
+  color: #10b981 !important;
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.bulletActive {
+  color: #f5f557;
+  font-weight: 900;
+}
+
+.bulletDone {
+  color: #10b981;
+  font-weight: 900;
+}

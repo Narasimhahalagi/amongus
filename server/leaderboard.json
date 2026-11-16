@@ -1,0 +1,24 @@
+{
+  "Abcc": {
+    "name": "Abcc",
+    "totalScore": 75,
+    "gamesPlayed": 2,
+    "crewmateWins": 0,
+    "impostorWins": 1,
+    "kills": 0,
+    "tasksCompleted": 0,
+    "votesCorrect": 0,
+    "lastActive": 1794788203934
+  },
+  "ye6": {
+    "name": "ye6",
+    "totalScore": 135,
+    "gamesPlayed": 2,
+    "crewmateWins": 0,
+    "impostorWins": 1,
+    "kills": 0,
+    "tasksCompleted": 4,
+    "votesCorrect": 0,
+    "lastActive": 1794813903490
+  }
+}
